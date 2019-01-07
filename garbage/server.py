@@ -10,8 +10,11 @@ import uvicorn
 
 app = Starlette()
 
+
 def generate_image() -> Image:
     image = Image.new(mode='L', size=(200, 200), color=255)
+    trash_image = Image.open('garbage/data/trash-w.png')
+    image.paste(trash_image, (50, 30))
     draw = ImageDraw.Draw(image)
     locale_time = datetime.isoformat(datetime.now()).split('.')[0]
     # locale_time = time.strftime('%X')
