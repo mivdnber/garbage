@@ -43,3 +43,6 @@ coverage.xml
 
 # virtualenv
 .venv
+
+# garbage specific config
+garbage/config/config.py

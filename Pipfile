@@ -10,6 +10,9 @@ starlette = "*"
 pillow = "*"
 uvicorn = "*"
 gunicorn = "*"
+arrow = "*"
+ics = "*"
+aiohttp = "*"
 
 [requires]
 python_version = "3.7"
