@@ -31,7 +31,7 @@ def generate_image(pickup: Pickup) -> Image:
     trash_image = Image.open(get_garbage_image_path(pickup.garbage_types))
     image.paste(trash_image, (50, 24))
     draw = ImageDraw.Draw(image)
-    draw.fontmode = "0"
+    draw.fontmode = '1'
     garbage_text = ', '.join(pickup.garbage_types)
     human_date = pickup.date.humanize(locale='nl')
     if SHOW_TIMESTAMP:
