@@ -27,7 +27,7 @@ async def get_next_pickup(calendar_url: Text=CALENDAR_URL) -> Pickup:
     raw_ics = await _fetch(calendar_url)
     calendar = ics.Calendar(raw_ics)
     now = arrow.get()
-    next_week = now.replace(weeks=+1)
+    next_week = now.replace(weeks=+2)
     events = list(calendar.timeline.included(now, next_week))
     garbage_types = [
         event.name for event in events
